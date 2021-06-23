@@ -14,14 +14,31 @@ import com.example.whatsappclone.config.ConfiguracaoFirebase;
 import com.example.whatsappclone.helper.UsuarioFirebase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.heinrichreimersoftware.materialintro.app.IntroActivity;
+import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends IntroActivity {
 
     private FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        setButtonBackVisible(false);
+        setButtonNextVisible(false);
+
+        addSlide(new FragmentSlide.Builder()
+                .background(R.color.colorSecondaryVariant)
+                .fragment(R.layout.material_intro_layout_1, R.style.Theme_AppCompat_Light_NoActionBar)
+                .canGoBackward(false)
+                .build());
+
+        addSlide(new FragmentSlide.Builder()
+                .background(R.color.colorSecondaryVariant)
+                .fragment(R.layout.material_intro_layout_2, R.style.Theme_AppCompat_Light_NoActionBar)
+                .canGoForward(false)
+                .build());
+
     }
 
     @Override
