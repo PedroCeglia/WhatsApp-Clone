@@ -12,16 +12,17 @@
         android:layout_height="200dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="80dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:scaleType="centerCrop"
         android:src="@drawable/padrao"
 
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+        app:layout_constraintVertical_bias="0.37"
         tools:src="@drawable/padrao" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -50,9 +51,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/background_caixa_de_texto"
             android:ems="10"
+            android:hint="Altere seu nome"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:padding="10dp" />
 
         <ImageView
             android:id="@+id/imageAtualizarNome"
@@ -66,24 +69,24 @@
         android:id="@+id/imageButtonGaleria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_image_22"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewFotoContato"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:src="@drawable/ic_baseline_image_22"
         tools:srcCompat="@drawable/ic_baseline_image_22" />
 
     <ImageButton
         android:id="@+id/imageButtonCamera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_photo_camera_24"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewFotoContato"
         app:layout_constraintEnd_toEndOf="@+id/imageViewFotoContato"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
-        tools:src="@drawable/ic_baseline_photo_camera_24"
         tools:srcCompat="@drawable/ic_baseline_photo_camera_24" />
 
     <LinearLayout

@@ -329,6 +329,7 @@ public class ChatActivity extends AppCompatActivity {
                     salvarConversa(idRemetenteGrupo ,idUsuarioDestinatario, usuarioDestinatario, mensagem,true, false);
                 }
             }
+            //adapter.notifyDataSetChanged();
         }else {
             Toast.makeText(ChatActivity.this,
                     "Digite uma mensagem para enviar!",
